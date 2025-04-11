@@ -172,7 +172,7 @@ fetch('database.json')
       let experience_text = "";
       for(let i in experience["data"]){
         if (experience["data"][i]["Candidate_ID"] - 1 == x){
-          experience_text += `${positions["data"][find(experience["data"][i]["Position_ID"], "Position_ID", positions["data"])]["Position_Name"]}`;
+          experience_text += `${positions["data"][find(experience["data"][i]["Position_ID"], "Position_ID", positions["data"])]["Position_Name"]}<br>`;
         }
       }
       if (experience_text == ""){
@@ -185,7 +185,7 @@ fetch('database.json')
         console.log("-"+x);
         if (committed["data"][i]["Candidate_ID"] - 1 == x){
           console.log(committed["data"][i]["Offense_ID"]);
-          committed_text += `${offense["data"][find(committed["data"][i]["Offense_ID"], "Offense_ID", offense["data"])]["Offense_Name"]}`;
+          committed_text += `${offense["data"][find(committed["data"][i]["Offense_ID"], "Offense_ID", offense["data"])]["Offense_Name"]}<br>`;
         }
       }
       if (committed_text == ""){
